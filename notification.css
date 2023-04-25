@@ -1,0 +1,52 @@
+/* Style pour l'icône de notification */
+.notification-icon {
+    position: relative;
+  }
+  
+  .notification-icon::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: none;
+  }
+  
+  .notification-icon.new::after {
+    display: block;
+  }
+  
+  /* Style pour la liste de suggestions */
+  .notification-list {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    display: none;
+    z-index: 9999;
+  }
+  
+  .notification-list.show {
+    display: block;
+  }
+  
+  .notification-list li {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .notification-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.notification-icon .new {
+	display: none;
+}
